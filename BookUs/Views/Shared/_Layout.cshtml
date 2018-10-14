@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @*<link href="~/Content/vendors/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/vendors/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Content/vendors/nprogress.css" rel="stylesheet" />
+        <link href="~/Content/vendors/green.css" rel="stylesheet" />
+        <link href="~/Content/vendors/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+        <link href="~/Content/vendors/jqvmap.min.css" rel="stylesheet" />
+        <link href="~/Content/vendors/daterangepicker.css" rel="stylesheet" />*@
+
+
+    @Styles.Render("~/Content/css/vendor")
+    @Styles.Render("~/Content/css/custom")
+
+    <!-- Custom Theme Style -->
+    <!--<link href="../build/css/custom.min.css" rel="stylesheet">-->
+    <link href="~/Content/build/custom.min.css" rel="stylesheet" />
+    @*@RenderSection("Head")*@
+</head>
+<body>
+    <div class="container body">
+        <div class="main_container">
+            @Html.Partial("~/Views/Shared/_LeftBar.cshtml")
+            <!-- top navigation -->
+            @Html.Partial("~/Views/Shared/_TopNav.cshtml")
+            <!-- /top navigation -->
+            <!-- page content -->
+            @RenderBody()
+            <!-- /page content -->
+            <!-- footer content -->
+            @Html.Partial("~/Views/Shared/_Footer.cshtml")
+            <!-- /footer content -->
+        </div>
+    </div>
+</body>
+</html>
